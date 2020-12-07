@@ -1,0 +1,22 @@
+{
+    "name": "sush/starter",
+    "description": "boilerplate for package development",
+    "type": "project",
+    "authors": [{
+        "name": "Sulav Shrestha",
+        "email": "connect@sulav.name.np"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sush\\Starter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sush\\Starter\\Providers\\SushStarterServiceProvider"
+            ]
+        }
+    }
+}
