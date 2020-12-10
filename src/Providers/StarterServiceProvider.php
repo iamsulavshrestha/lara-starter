@@ -1,13 +1,11 @@
 <?php
 
-namespace Sush\Starter\Providers;
+namespace Sushre\Starter\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Setting;
-use Config;
 
-class SushStarterServiceProvider extends ServiceProvider
+class StarterServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -42,6 +40,6 @@ class SushStarterServiceProvider extends ServiceProvider
   }
 
   public function registerViews(){
-    $this->loadViewsFrom(__DIR__ . '/../../resources/views/', 'sush_setting');
+    $this->loadViewsFrom(__DIR__ . '/../../resources/views/', 'sush_starter');
   }
 }

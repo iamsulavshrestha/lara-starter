@@ -1,5 +1,5 @@
 {
-    "name": "sush/starter",
+    "name": "sushre/starter",
     "description": "boilerplate for package development",
     "type": "project",
     "authors": [{
@@ -9,13 +9,13 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "Sush\\Starter\\": "src/"
+            "Sushre\\Starter\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Sush\\Starter\\Providers\\SushStarterServiceProvider"
+                "Sushre\\Starter\\Providers\\StarterServiceProvider"
             ]
         }
     }

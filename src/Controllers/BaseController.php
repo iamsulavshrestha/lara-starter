@@ -1,6 +1,6 @@
 <?php
 
-namespace Sush\Starter\Controllers;
+namespace Sushre\Starter\Controllers;
 
 use Illuminate\App\Http\Controlers\Controller;
 
