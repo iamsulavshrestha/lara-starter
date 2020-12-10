@@ -2,8 +2,11 @@
 
 namespace Sushre\Starter\Controllers;
 
-use Illuminate\App\Http\Controlers\Controller;
+use Sushre\Starter\Controllers\Controller;
 
 class BaseController extends Controller{
   
+  public function setPageTitle($title, $subTitle){
+    view()->share(['pageTitle' => $title, 'subTitle' => $subTitle]);
+  }
 }
