@@ -18,11 +18,14 @@ class BaseRepository implements BaseContract{
      * @param string $sortBy
      * @return mixed
      */
-    public function all(string $orderBy = 'created_at', string $sortBy = 'desc', $columns = array('*'))
+    public function all(string $orderBy = 'created_at', string $sortBy = 'desc')
     {
-        return $this->model->orderBy($orderBy, $sortBy)->get($columns);
+        return $this->model->orderBy($orderBy, $sortBy);
     }
 
+    public function getAll(string $orderBy = 'created_at', string $sortBy = 'desc', $columns = array('*')){
+      return $this->model->orderBy($orderBy, $sortBy)->get($columns);
+    }
     /**
      * @param array $attributes
      * @return mixed
@@ -76,7 +79,11 @@ class BaseRepository implements BaseContract{
      */
     public function findBy(array $data)
     {
-        return $this->model->where($data)->get();
+        return $this->model->where($data);
+    }
+
+    public function getFindBy(array $data){
+      return $this->model->where($data)->get();
     }
 
     /**
@@ -97,10 +104,5 @@ class BaseRepository implements BaseContract{
     {
         return $this->model->where($data)->firstOrFail();
     }
-
-    public function paginate($perPage = 10, $columns = ['*']){
-    return $this->model->paginate($perPage, $columns);
-  }
-
 
 }
