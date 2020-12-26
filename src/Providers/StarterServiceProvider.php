@@ -40,7 +40,7 @@ class StarterServiceProvider extends ServiceProvider
       $this->publishes([
         $this->rootPath .'database/migrations/' => database_path('migrations'),
         $this->rootPath .'config/starter.php' => config_path('starter.php'),
-        $this->rootPath .'resources/views/' => resource_path('view/vendor/starter/'),
+        $this->rootPath .'resources/views/' => resource_path('views/vendor/starter/'),
       ], 'sushre_starter');
   }
 
